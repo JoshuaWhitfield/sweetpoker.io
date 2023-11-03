@@ -1,10 +1,10 @@
 # sweetpoker.io
-this repository showcases the code behind my live project sweetpoker.io
-The 'sweetpoker.io' domain is active right now, and is a resource potential employers can use to see my skills first hand.
+This repository showcases the code behind my live project <font color="purpe">sweetpoker.io</font><br>
+The 'sweetpoker.io' domain is active right now, and is a resource potential employers can use to see my skills first hand.<br><br>
 
-The project is located in the '<b>master</b>' branch.
+The project is located in the '<b>master</b>' branch.<br>
 The poker engine is located under '<b>/src/poker-engine</b>'. <br>
-Poker Engine:<br>
+<font color="purple">Poker Engine</font>:<br>
   -creates deck of 52 cards<br>
   -deals hole cards<br>
   -deals river cards<br>
