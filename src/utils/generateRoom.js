@@ -70,8 +70,11 @@ const generateRoom = () => {
             result+='es';
         }
     }
-    return result;
 
+    if (result.indexOf('A ') > -1 && result[result.length-1] === 's') result=result.slice(0, -1); 
+
+    return result;
+    
 }
 
 export default generateRoom
