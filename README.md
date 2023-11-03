@@ -3,7 +3,7 @@ This repository showcases the code behind my live project <font color="purpe">sw
 The 'sweetpoker.io' domain is active right now, and is a resource potential employers can use to see my skills first hand.<br><br>
 
 The project is located in the '<b>master</b>' branch.<br>
-The poker engine is located under '<b>/src/poker-engine</b>'. <br>
+The poker engine is located under '<b>/src/poker-engine</b>'. <br><br>
 <font color="purple">Poker Engine</font>:<br>
   -creates deck of 52 cards<br>
   -deals hole cards<br>
