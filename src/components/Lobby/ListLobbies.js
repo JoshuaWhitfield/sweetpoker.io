@@ -28,40 +28,40 @@ const ListLobbies = () => {
   const sections = ['table', 'mode', 'limit', 'stakes'];
   const [ tables, setTables ] = useState([]);
 
-  const matchTablesWithConfig = (response) => {
-    const result = response.filter((item) => {
-      const sects = item.sections;
-      if (mode.value.length > 0 && sects[1] !== mode.value) return false;
-      if (limit.value.length > 0 && sects[2] !== limit.value) return false;
-      if (stakes.value.length > 0 && sects[3].split(' ')[0] !== stakes.value) return false;
-      return true;
-    });
-
-    return result;
+  async function fetchTables() {
+    const matchTablesWithConfig = (response) => {
+      const result = response.filter((item) => {
+        const sects = item.sections;
+        if (mode.value.length > 0 && sects[1] !== mode.value) return false;
+        if (limit.value.length > 0 && sects[2] !== limit.value) return false;
+        if (stakes.value.length > 0 && sects[3].split(' ')[0] !== stakes.value) return false;
+        return true;
+      });
+  
+      return result;
+    }
+  
+    try {
+      const response = await getAllTables();
+      if (!Array.isArray(response) || (Array.isArray(response) && !response.length)) {
+        console.log('fetchTables response was empty...');
+        setTables([]);
+      } else {
+        const filteredTables = matchTablesWithConfig(response);
+        setTables(filteredTables);
+        setFirstIdx();
+        setLastIdx();
+        //setOpen(false);
+        setIndex()
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
 
   useEffect(() => {
-    async function fetchTables() {
-        try {
-          const response = await getAllTables();
-          if (!Array.isArray(response) || (Array.isArray(response) && !response.length)) {
-            console.log('fetchTables response was empty...');
-            setTables([]);
-          } else {
-            const filteredTables = matchTablesWithConfig(response);
-            setTables(filteredTables);
-            setFirstIdx();
-            setLastIdx();
-            //setOpen(false);
-            setIndex()
-          }
-        } catch (error) {
-          console.error('Error:', error);
-        }
-    }
-
     fetchTables();
-  }, [mode.value, limit.value, stakes.value])
+  }, [mode.value, limit.value, stakes.value, fetchTables()])
 
   const handleClick = (e) => {
     /* add information to the store state

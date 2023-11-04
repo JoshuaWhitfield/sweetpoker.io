@@ -1,0 +1,1 @@
+import { PRODUCTS } from "../../app/shared/PRODUCTS";

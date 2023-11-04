@@ -1,0 +1,33 @@
+const increase_chips = '@increase_chips';
+const decrease_chips = '@decrease_chips';
+const set_chips = '@set_chips';
+const is_bankrupt = '@is_bankrupt';
+const is_healthy = '@is_healthy'
+
+export const increaseChips = (amount) => {
+    return {
+        type: increase_chips,
+        payload: amount,
+    }
+}
+
+export const decreaseChips = (amount) => {
+    return {
+        type: decrease_chips,
+        payload: amount,
+    }
+}
+
+export const setChips = (amount) => {
+    return {
+        type: set_chips,
+        payload: amount,
+    }
+}
+
+export const isBankrupt = () => {
+    return {
+        type: is_bankrupt,
+        payload: null,
+    }
+}

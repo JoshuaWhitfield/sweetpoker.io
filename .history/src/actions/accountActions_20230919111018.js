@@ -1,0 +1,16 @@
+const set_username = '@set_username';
+const set_decal = '@set_decal';
+
+export const setUsername = (username) => {
+    return {
+        type: set_username,
+        payload: username,
+    }
+}
+
+export const const setDecal = (decal) => {
+    return {
+        type: set_decal,
+        payload: decal,
+    }
+}

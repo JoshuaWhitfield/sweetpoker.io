@@ -1,0 +1,1 @@
+const deal_flop = '@deal_flop'

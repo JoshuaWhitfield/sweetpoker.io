@@ -1,0 +1,207 @@
+$background: rgb(17, 0, 36);
+$primary-elem: rgba(97, 14, 205, 0.885);
+$primary-text: rgb(158, 94, 241);
+$secondary-text: rgb(255, 255, 255);
+$card-outline: rgb(58, 53, 64);
+$primary-card: rgb(43, 39, 47);
+$secondary-card: rgb(31, 28, 33);
+$gradient: linear-gradient(90deg, rgb(158, 94, 241), rgb(88, 8, 192));
+$gradient2: linear-gradient(45deg, rgb(158, 94, 241), rgb(88, 8, 192));
+
+body {
+    background-color: $background;
+}
+
+.custom-body {
+    margin: 100px 100px 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.custom-box {
+    position: absolute;
+    width: fit-content;
+    height: fit-content; 
+}
+
+.fit-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    background-image: url(../app/assets/logo/logo-gradient.png);
+}
+
+.full-height {
+    height: 100%;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+/* buttons */
+
+.button {
+    background-image: $gradient;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.button p {
+    color: $secondary-text;
+}
+
+.button:hover {
+    opacity: 0.93;
+    filter: brightness(1.2);
+}
+
+.util-button {
+    background-color: $card-outline;
+    border-radius: 50%;
+}
+
+.util-button:hover, .util-button:enabled {
+    background-color: $primary-elem;
+}
+
+.util-button p {
+    color:$secondary-text
+}
+
+input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+textarea:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+/* text */
+
+h2, h1, h3 {
+    font-family: 'Lato', sans-serif; 
+    color: $primary-text;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    color: $secondary-text;
+}
+
+.light-text {
+    color: $primary-text;
+}
+
+.dark-text {
+    color: $card-outline;
+}
+
+::placeholder {
+    color: $primary-text!important;
+}
+
+input:not(:placeholder-shown) {
+    background-color:  $secondary-card!important;
+    color: $primary-text!important;
+}
+ 
+ 
+input:placeholder-shown {
+    background-color:  $secondary-card!important;
+    color: $primary-text!important;
+}
+
+/* card */
+
+.basic-card {
+    background-color: $primary-card;
+    border-radius: 5px;
+    border: solid 2px $card-outline;
+}
+
+@media screen and (min-width: 200px) {
+    .basic-card {
+        width: 40%
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .basic-card {
+        width: 60%
+    }
+}
+
+@media screen and (min-width: 476px) {
+    .basic-card {
+        width: 70%
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .basic-card {
+        width: 80%
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .basic-card {
+        width: 80%
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .basic-card {
+        width: 80%
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .basic-card {
+        width: 80%
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .basic-card {
+        width: 80%
+    }
+}
+
+/* flex-box */
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* debugging */
+
+.debug {
+    border: solid 2px lightgreen;
+}
+
+.debug2 {
+    border: solid 2px orange;
+}
+
+.debug3 {
+    border: solid 2px lightblue;
+}
