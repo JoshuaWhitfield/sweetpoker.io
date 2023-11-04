@@ -61,7 +61,7 @@ const ListLobbies = () => {
 
   useEffect(() => {
     fetchTables();
-  }, [mode.value, limit.value, stakes.value, fetchTables()])
+  }, [mode.value, limit.value, stakes.value])
 
   const handleClick = (e) => {
     /* add information to the store state
